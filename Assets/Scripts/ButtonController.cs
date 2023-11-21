@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-
+/// <summary>
+/// Такой подход позволяет добиться того что код кнопки не знает про ScoreController, а ScoreController следит за кнопкой
+/// </summary>
 public class ButtonController : MonoBehaviour
 {
     [SerializeField] private Button _button;
