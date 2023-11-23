@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 /// <summary>
-/// Такой подход позволяет добиться того что код кнопки не знает про ScoreController, а ScoreController следит за кнопкой
+/// Такой подход позволяет добиться того что код кнопки не знает про ScoreController, и ScoreController не знает про код кнопки
 /// </summary>
 public class ButtonController : MonoBehaviour
 {
@@ -14,6 +14,7 @@ public class ButtonController : MonoBehaviour
     private void Start()
     {
         _button.onClick.AddListener(() => AddPoints());
+        EventManager.AddEventInvoker(this);
     }
 
     private void AddPoints() 

@@ -6,12 +6,11 @@ using UnityEngine.UI;
 
 public class ScoreController : MonoBehaviour
 {
-    [SerializeField] private ButtonController _buttonController;
     [SerializeField] private TMP_Text _scoreText;
     private int _score = 0;
     private void Start()
     {
-        _buttonController.AddPointsAddedEventListener(AddPoints);
+        EventManager.AddEventListener(AddPoints);
     }
 
     private void AddPoints(int points) 
