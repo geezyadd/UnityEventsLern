@@ -8,8 +8,8 @@ using UnityEngine.UI;
 /// </summary>
 public class ButtonController : MonoBehaviour
 {
-    [SerializeField] private Button _button;
     PointsAddedEvent pointsAddedEvent = new PointsAddedEvent();
+    [SerializeField] private Button _button;
     [SerializeField] private int _pointsForOneClick;
     private void Start()
     {
